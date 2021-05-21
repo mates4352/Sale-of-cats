@@ -1,0 +1,9 @@
+.btn {
+   @include font(16px,1,false);
+   @include wh(100%,65px);
+   color: var(--secondary-color);
+   background: var(--additional);
+   border: none;
+   border-bottom-right-radius: 15px;
+   border-bottom-left-radius: 15px;
+}

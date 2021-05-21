@@ -1,0 +1,140 @@
+.cat {
+   padding: 37px 0 83px 0;
+}
+
+.cat__wrap-sorting {
+   display: flex;
+   align-items: center;
+   margin: 0 0 48px;
+}
+
+.cat__subtitle {
+   @include font(18px,1.2,false);
+   margin: 0 48px 0 0;
+   color: var(--base-color);
+}
+
+.cat__wrap-input {
+   position: relative;
+   display: flex;
+}
+
+.cat__wrap-input:first-of-type {
+   margin: 0 55px 0 0;
+}
+
+.cat__label {
+   @include font(18px,1,400);
+   padding: 0 25px 0 0;
+   color: var(--base-color);
+   cursor: pointer;
+}
+
+.cat__arrow {
+   @include wh(15px);
+   position: absolute;
+   top: 55%;
+   right: 0;
+   transform: translateY(-50%) rotate(180deg);
+   transition: transform 500ms ease;
+}
+
+.cat__input:checked + .cat__label > .cat__arrow {
+   transform: translateY(-50%) rotate(0deg);
+}
+
+.cat__wrapper {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: 0 -15px;
+}
+
+.cat__card {
+   width: 380px;
+   margin: 0 15px 27px;
+
+   @include media(max,1240px) {
+      width: 450px;
+   }
+
+   @include media(max,$lg) {
+      width: 400px;
+   }
+
+   @include media(max,875px) {
+      width: 600px;
+   }
+}
+
+.cat__img {
+   width: 100%;
+   height: 265px;
+   object-fit: cover;
+   object-position: center;
+}
+
+.cat__wrap-column {
+   padding: 30px;
+}
+
+.cat__title {
+   @include font(24px,1,false);
+   margin: 0 0 22px 0;
+   color: var(--base-color);
+}
+
+.cat__wrap-caption {
+   position: relative;
+   display: flex;
+   align-items: center;
+   margin: 0 0 16px;
+   padding: 0 0 0 22px;
+}
+
+.cat__wrap-caption::before {
+   @include wh(4px,80%);
+   position: absolute;
+   top: 50%;
+   left: 0;
+   background-color: var(--additional);
+   transform: translateY(-50%);
+   content: '';
+}
+
+.cat__text {
+   @include font(12px,1.2,400);
+   display: block;
+   color: var(--base-color);
+}
+
+.cat__text--max {
+   max-width: 80px;
+}
+
+.cat__wrap-age {
+   margin: 0 0 0 25px;
+}
+
+.cat__age {
+   @include font(16px,1,false);
+   color: var(--base-color);
+}
+
+.cat__wrap-quantity {
+   margin: 0 0 0 48px;
+}
+
+.cat__quantity {
+   @include font(16px,1,false);
+   color: var(--base-color);
+}
+
+.cat__price {
+   @include font(24px,1,false);
+   color: var(--base-color);
+}
+
+// .cat__button {
+
+// }
