@@ -20,7 +20,7 @@ const images = () => (
       .pipe(gulpif(config.isProd, gulp.src(config.src.images)))
       .pipe(gulpif(config.isProd, newer(`${config.build.images}/**/*`)))
       .pipe(gulpif(config.isProd, webp({
-         quality: 70,
+         quality: 80,
       })))
    .pipe(gulpif(config.isProd, gulp.dest(config.build.images)))
 )

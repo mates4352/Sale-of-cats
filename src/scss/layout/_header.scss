@@ -1,1 +1,58 @@
 //header
+
+.header {
+   padding: 25px 0 60px 0;
+   background: url('./../../assets/images/header/bg.jpg') no-repeat center center /cover;
+   background: url('./../../assets/images/header/bg.webp') no-repeat center center /cover;
+}
+
+.header__wrap {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 35px;
+}
+
+.header__block {
+   display: flex;
+   align-items: center;
+}
+
+.header__logo {
+   @include wh(78px);
+   margin-right: 120px;
+   fill: var(--secondary-color);
+}
+
+.header__list {
+   display: flex;
+}
+
+.header__item:not( :last-of-type ) {
+   margin-right: 72px;
+}
+
+.header__link {
+   @include font(18px,1,400);
+   color: var(--secondary-color);
+   opacity: var(--header-opacity);
+}
+
+.header__tel {
+   @include font(29px,1.2,false);
+   display: block;
+   margin-bottom: 5px;
+   color: var(--secondary-color);
+}
+
+.header__message {
+   @include font(18px,1.2,400,right);
+   display: block;
+   color: var(--secondary-color);
+   opacity: var(--header-opacity);
+}
+
+.header__text {
+   @include font(38px,1.2,false);
+   color: var(--secondary-color);
+}

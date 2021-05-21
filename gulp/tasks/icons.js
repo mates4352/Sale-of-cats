@@ -21,7 +21,7 @@ const iconSvg = () => (
       .pipe(svgSprite({
          mode: {
             symbol: {
-               sprite: 'spriteNoDisable.svg',
+               sprite: 'spriteSVG.svg',
             },
          },
          shape: {
