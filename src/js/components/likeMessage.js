@@ -16,7 +16,7 @@ const likeMessage = () => {
                   e.classList.add('active')
                }
 
-            } else {
+            } else if (e.hasAttribute('data-message-2')) {
 
                e.classList.add('active')
 
@@ -24,9 +24,18 @@ const likeMessage = () => {
 
             setTimeout(() => {
 
-               e.classList.remove('active')
+               if (e.hasAttribute('data-message-1')) {
 
-           }, 800)
+                  e.classList.remove('active')
+
+               } else {
+
+                  e.classList.remove('active')
+
+               }
+
+
+            }, 800)
 
          });
 
