@@ -1,0 +1,22 @@
+.arrowTop {
+   @include wh(59px);
+   position: fixed;
+   right: 50px;
+   bottom: 50px;
+   z-index: 8888;
+   background-color: var(--additional);
+   cursor: pointer;
+}
+
+.arrowTop__svg {
+   @include wh(18px);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   fill: #fff;
+}
+
+.arrowTop:active .arrowTop__svg {
+   top: 40%;
+}
