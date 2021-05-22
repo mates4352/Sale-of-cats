@@ -7,8 +7,7 @@
   --additional: #6ebbd3;
   --secondary-color: #fff;
   --base-color: #000;
-  --header-opacity: 0.7;
-  --base-color: #000
+  --header-opacity: 0.7
 }
 @font-face {
   font-family: "Montserrat";
@@ -488,9 +487,10 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 -15px
+  margin: 0 -15px -27px
 }
 .cat__card {
+  position: relative;
   width: 380px;
   margin: 0 15px 27px
 }
@@ -508,6 +508,30 @@ h6 {
   .cat__card {
     width: 600px
   }
+}
+.cat__discount {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  width: 78px;
+  height: 39px;
+  position: absolute;
+  top: 36px;
+  left: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+  background: #e62d2d;
+  border-radius: 10px
+}
+.cat__like {
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  fill: #999
 }
 .cat__img {
   width: 100%;
@@ -571,4 +595,17 @@ h6 {
   font-size: 24px;
   line-height: 1;
   color: var(--base-color)
+}
+.cat__button {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: 65px;
+  margin: 68px auto 0 auto;
+  color: var(--base-color);
+  border: 1px solid #cacaca;
+  border-radius: 10px
 }
