@@ -1,0 +1,21 @@
+.message {
+   @include font(16px,1.2,false,center);
+   @include wh(150px,60px);
+   position: fixed;
+   top: 50px;
+   right: 50px;
+   z-index: 6666;
+   padding: 10px;
+   color: var(--secondary-color);
+   background-color: var(--additional);
+   border: 1px solid rgba(0, 0, 0, 0.301);
+   border-radius: 10px;
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity 500ms ease, visibility 500ms ease;
+}
+
+.message.active {
+   visibility: visible;
+   opacity: 1;
+}

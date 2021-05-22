@@ -17,6 +17,12 @@ const burger = () => {
       Burger.classList.toggle('active')
       menu.classList.toggle('active')
 
+      if (Burger.classList.contains('active')) {
+         Body.style.overflowY = "hidden"
+      } else {
+         Body.style.overflowY = "auto"
+      }
+
       aria('aria-hidden', 'true', 'false')
       aria('aria-label','Открыть меню','Закрыть меню')
    })
