@@ -8,8 +8,9 @@
    <title>title</title>
 </head>
 
-<body>
+<body class="body">
    <header class="header">
+   <div class="menu"></div>
    <h1 class="hidden">Продажа котов</h1>
    <div class="container">
       <div class="header__wrap">
@@ -56,6 +57,10 @@
             <strong class="header__tel">+544 3490 00000</strong>
             <span class="header__message">Звони скорее!</span>
          </div>
+
+         <button class="burger" aria-label="Открыть меню" aria-hidden="true">
+            <span></span>
+         </button>
 
       </div>
 
@@ -327,8 +332,29 @@
 
 
    <footer class="footer">
-   <div class="container">
-      <div class="footer__wrapper"></div>
+   <div class="container container--bg">
+      <div class="footer__wrapper">
+
+         <div class="footer__column">
+            <h2 class="footer__title">Успей купить!</h2>
+            <p class="footer__text">Подпишись и успей словить все акции</p>
+         </div>
+
+         <form class="footer__form" action="#" >
+
+            <div class="footer__wrap">
+               <input class="footer__email" type="text" placeholder="Email">
+               <button class="footer__btn btn">Подписаться</button>
+            </div>
+
+            <div class="footer__wrap">
+               <input class="footer__checked hidden" id="subscribe" type="checkbox">
+               <label class="footer__label" for="subscribe">Подписаться на новости</label>
+            </div>
+
+         </form>
+
+      </div>
    </div>
 </footer>
 

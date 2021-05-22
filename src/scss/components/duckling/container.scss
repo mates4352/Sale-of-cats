@@ -1,5 +1,17 @@
 .container {
    max-width: $xl;
    margin: 0 auto;
-   padding: 0 15px;
+   padding: 0 50px;
+
+   @include media(max,$xl) {
+      padding: 0 30px;
+   }
+
+   @include media(max,$lg) {
+      padding: 0 15px;
+   }
+}
+
+.container--bg {
+   background-color: #1f2021;
 }

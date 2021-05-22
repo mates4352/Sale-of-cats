@@ -6,6 +6,11 @@
    display: flex;
    align-items: center;
    margin: 0 0 48px;
+
+   @include media(max,$sm) {
+      flex-direction: column;
+      align-items: flex-start;
+   }
 }
 
 .cat__subtitle {
@@ -53,17 +58,13 @@
 .cat__card {
    position: relative;
    width: 380px;
-   margin: 0 15px 27px;
+   margin: 0 10px 27px;
 
-   @include media(max,1240px) {
+   @include media(max,$xl) {
       width: 450px;
    }
 
    @include media(max,$lg) {
-      width: 400px;
-   }
-
-   @include media(max,875px) {
       width: 600px;
    }
 }

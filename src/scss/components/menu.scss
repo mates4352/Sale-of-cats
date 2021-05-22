@@ -1,0 +1,14 @@
+.menu {
+   @include wh(100%);
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 8888;
+   background-color: #000;
+   transform: translateX(-101%);
+   transition: transform 500ms ease;
+}
+
+.menu.active {
+   transform: translateX(0);
+}

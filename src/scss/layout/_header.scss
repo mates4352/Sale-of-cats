@@ -11,6 +11,10 @@
    align-items: center;
    justify-content: space-between;
    margin: 0 0 35px;
+
+   @include media(max, $sm) {
+      flex-direction: column;
+   }
 }
 
 .header__block {
@@ -22,20 +26,80 @@
    @include wh(78px);
    margin: 0 120px 0 0;
    fill: var(--secondary-color);
+
+   @include media(max, $lg) {
+      margin: 0 0 0 0;
+   }
+}
+
+.header__nav {
+   height: 100%;
 }
 
 .header__list {
    display: flex;
+   height: inherit;
+
+   @include media(max,$lg) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
 }
 
 .header__item:not( :last-of-type ) {
    margin: 0 72px 0 0;
+
+   @include media(max,$lg) {
+      margin: 0 0 25px 0;
+   }
 }
 
 .header__link {
    @include font(18px,1,400);
+   position: relative;
    color: var(--secondary-color);
-   opacity: var(--header-opacity);
+   outline: 0;
+   opacity: var(--opacity);
+   transition: color 500ms ease;
+
+   @include media(max,$lg) {
+      font-size: 40px;
+   }
+}
+
+.header__link:focus,
+.header__link:hover {
+   color: var(--additional);
+}
+
+.header__link::before {
+   @include wh(100%,2px);
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   background-color: var(--additional);
+   transform: scale(0);
+   transition: transform 500ms ease;
+   content: '';
+}
+
+.header__link:focus::before,
+.header__link:hover::before {
+   transform: scale(1);
+}
+
+.header__contact {
+   text-align: right;
+
+   @include media(max, $lg) {
+      padding: 0 50px 0 0;
+   }
+
+   @include media(max, $sm) {
+      padding: 0;
+      text-align: center;
+   }
 }
 
 .header__tel {
@@ -43,16 +107,26 @@
    display: block;
    margin: 0 0 5px;
    color: var(--secondary-color);
+   text-align: inherit;
+
+   @include media(max, $sm) {
+      font-size: 25px;
+   }
 }
 
 .header__message {
    @include font(18px,1.2,400,right);
    display: block;
    color: var(--secondary-color);
-   opacity: var(--header-opacity);
+   text-align: inherit;
+   opacity: var(--opacity);
 }
 
 .header__text {
    @include font(38px,1.2,false);
    color: var(--secondary-color);
+
+   @include media(max, $sm) {
+      text-align: center;
+   }
 }
