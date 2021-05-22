@@ -4,10 +4,14 @@ const buttonArrowTop = () => {
 
    window.addEventListener("scroll", () => {
 
-      if (window.scrollY > 0 ) {
+      if (window.scrollY > 0) {
+
          ArrowTop.style.display = 'block'
+
       } else {
+
          ArrowTop.style.display = "none"
+
       }
 
    })
@@ -15,8 +19,10 @@ const buttonArrowTop = () => {
    ArrowTop.addEventListener("click", () => {
 
       window.scrollTo({
+
          top: 0,
          behavior: 'smooth'
+
       });
 
    })

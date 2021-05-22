@@ -43,8 +43,6 @@ const likeMessage = () => {
 
    });
 
-
-
 }
 
 export default likeMessage;

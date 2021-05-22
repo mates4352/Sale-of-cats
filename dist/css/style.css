@@ -575,7 +575,7 @@ h6 {
     margin: 0 16px 16px 0
   }
 }
-1.footer__email.validateTrue {
+.footer__email.validateTrue {
   border: 4px solid tomato
 }
 .footer__email.validateFalse {
@@ -618,17 +618,17 @@ h6 {
   position: absolute;
   top: 50%;
   left: 0;
-  background-color: var(--additional);
+  background-color: var(--secondary-color);
   border-radius: 3px;
   transform: translateY(-50%);
   content: ''
 }
 .footer__label::after {
-  width: 10px;
-  height: 10px;
+  width: 18px;
+  height: 18px;
   position: absolute;
   top: 50%;
-  left: 4px;
+  left: 0;
   display: none;
   background: url("../../assets/images/footer/check.png") no-repeat;
   transform: translateY(-50%);
@@ -783,13 +783,13 @@ h6 {
 .cat {
   padding: 37px 0 83px 0
 }
-.cat__wrap-sorting {
+.cat__sorting {
   display: flex;
   align-items: center;
   margin: 0 0 48px
 }
 @media only screen and (max-width: 576px) {
-  .cat__wrap-sorting {
+  .cat__sorting {
     flex-direction: column;
     align-items: flex-start
   }
@@ -800,11 +800,20 @@ h6 {
   margin: 0 48px 0 0;
   color: var(--base-color)
 }
-.cat__wrap-input {
+@media only screen and (max-width: 576px) {
+  .cat__subtitle {
+    margin: 0 0 25px 0
+  }
+}
+.cat__wrap-filters {
+  display: flex;
+  align-items: center
+}
+.cat__filter {
   position: relative;
   display: flex
 }
-.cat__wrap-input:first-of-type {
+.cat__filter:first-of-type {
   margin: 0 55px 0 0
 }
 .cat__label {
@@ -843,7 +852,12 @@ h6 {
     width: 450px
   }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1280px) and (max-width: 992px) {
+  .cat__card {
+    width: 340px
+  }
+}
+@media only screen and (max-width: 1280px) and (max-width: 992px) and (max-width: 768px) {
   .cat__card {
     width: 600px
   }
@@ -870,6 +884,7 @@ h6 {
   position: absolute;
   top: 32px;
   right: 32px;
+  cursor: pointer;
   transition: fill 500ms ease;
   fill: #999
 }

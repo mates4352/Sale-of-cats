@@ -57,7 +57,7 @@
    }
 }
 
-1.footer__email.validateTrue {
+.footer__email.validateTrue {
    border: 4px solid tomato;
 }
 
@@ -101,17 +101,17 @@
    position: absolute;
    top: 50%;
    left: 0;
-   background-color: var(--additional);
+   background-color: var(--secondary-color);
    border-radius: 3px;
    transform: translateY(-50%);
    content: '';
 }
 
 .footer__label::after {
-   @include wh(10px);
+   @include wh(18px);
    position: absolute;
    top: 50%;
-   left: 4px;
+   left: 0;
    display: none;
    background: url('./../../assets/images/footer/check.png') no-repeat;
    transform: translateY(-50%);
