@@ -567,12 +567,19 @@ h6 {
   font-weight: 700;
   text-indent: 33px;
   background-color: var(--secondary-color);
-  border-radius: 10px
+  border-radius: 10px;
+  outline: 0
 }
 @media only screen and (max-width: 576px) {
   .footer__email {
     margin: 0 16px 16px 0
   }
+}
+1.footer__email.validateTrue {
+  border: 4px solid tomato
+}
+.footer__email.validateFalse {
+  border: 4px solid green
 }
 .footer__email::placeholder {
   font-size: 14px;
