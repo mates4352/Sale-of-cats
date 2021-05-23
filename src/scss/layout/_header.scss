@@ -63,7 +63,6 @@
    opacity: var(--opacity);
    transition: color 500ms ease;
 
-
    @include media(max,$lg) {
       font-size: 40px;
    }
