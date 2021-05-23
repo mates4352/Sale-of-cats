@@ -1,35 +1,52 @@
 const sorting = () => {
-   let number = [];
-   const card = document.querySelector('.cat__wrapper')
-   for (let i = 0; i < card.children.length; i++){
+   const buttonSort1 = document.getElementById('buttonSort1')
+   const buttonSort2 = document.getElementById('buttonSort2')
 
+   let replacedNode;
 
-      for (let j = 0; j < card.children.length; j++) {
+   const insertAfter = (elem, refElem) => {
+      refElem.parentNode.insertBefore(elem, refElem.nextSibling)
+   }
 
-         if (!(card.children[i].children[j] == undefined)
-         && card.children[i].children[j].classList.contains('cat__wrap-column'))
-         {
+   buttonSort1.addEventListener('click', () => {
+      const card = document.querySelector('.cat__wrapper')
+      const price = document.querySelectorAll('.cat__price')
 
-            for (let v = 0; v < card.children[i].children[j].children.length; v++){
+      for (let i = 0; i < price.length; i++) {
+         for (let j = i; j < price.length; j++) {
 
-               if (!(card.children[i].children[j].children[v] == undefined)
-                  && card.children[i].children[j].children[v].classList.contains('cat__price'))
-               {
+            if (+(price[i].getAttribute('data-price')) > +(price[j].getAttribute('data-price'))) {
 
-                  number.push( Number(card.children[i].children[j].children[v].getAttribute('data-price') ))
-                  console.log(number);
-
-                  number.sort((a,b) => b - a )
-
-               }
+                  replacedNode = card.replaceChild(card.children[j], card.children[i]);
+                  insertAfter(replacedNode, card.children[i])
 
             }
-
          }
-
       }
 
-   }
+   })
+
+   buttonSort2.addEventListener('click', () => {
+      const card = document.querySelector('.cat__wrapper')
+      const price = document.querySelectorAll('.cat__price')
+
+      for (let i = 0; i < price.length; i++) {
+         for (let j = i; j < price.length; j++) {
+
+            if (+(price[i].getAttribute('data-price')) < +(price[j].getAttribute('data-price'))) {
+
+               replacedNode = card.replaceChild(card.children[j], card.children[i]);
+               insertAfter(replacedNode, card.children[i])
+
+            }
+         }
+      }
+
+   })
+
+
+
+
 
 }
 

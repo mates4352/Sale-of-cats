@@ -31,6 +31,7 @@
 .cat__filter {
    position: relative;
    display: flex;
+   // overflow: hidden;
 }
 
 .cat__filter:first-of-type {
@@ -53,8 +54,31 @@
    transition: transform 500ms ease;
 }
 
+.cat__sort {
+   position: absolute;
+   top: 20px;
+   left: 0;
+   z-index: 100;
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity 500ms ease, visibility 500ms ease;
+}
+
+.cat__sort button {
+   @include font(16px,1.2,700,left);
+   padding: 5px 5px;
+   color: tomato;
+   background-color: rgba(0, 0, 0, 0.8);
+   border: 1px solid;
+}
+
 .cat__input:checked + .cat__label > .cat__arrow {
    transform: translateY(-50%) rotate(0deg);
+}
+
+.cat__input:checked ~ .cat__sort {
+   visibility: visible;
+   opacity: 1;
 }
 
 .cat__wrapper {
@@ -202,6 +226,5 @@
 .cat__button:focus,
 .cat__button:hover {
    color: var(--secondary-color);
-   font-weight: 700;
    background: var(--base-color);
 }
