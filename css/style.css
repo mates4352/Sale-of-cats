@@ -567,8 +567,8 @@ h6 {
   width: 300px;
   height: 65px;
   margin: 0 16px 0 0;
+  padding: 25px 0 25px 33px;
   font-weight: 700;
-  text-indent: 33px;
   background-color: var(--secondary-color);
   border-radius: 10px;
   outline: 0
