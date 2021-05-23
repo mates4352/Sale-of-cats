@@ -119,6 +119,10 @@
 
 .cat__wrap-column {
    padding: 30px;
+
+   @include media(max,$sm) {
+      padding: 15px;
+   }
 }
 
 .cat__title {
@@ -133,6 +137,10 @@
    align-items: center;
    margin: 0 0 16px;
    padding: 0 0 0 22px;
+
+   @include media(max,$sm) {
+      padding: 0 0 0 10px;
+   }
 }
 
 .cat__wrap-caption::before {

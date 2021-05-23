@@ -11,8 +11,6 @@
    "author": "Sergeu Sabyrkin",
    "license": "WTFPL",
    "scripts": {
-      "dev": "gulp watch",
-      "prod": "gulp watch --prod"
    },
    "lint-staged": {
       "*.scss": "stylelint"

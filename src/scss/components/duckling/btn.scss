@@ -10,6 +10,10 @@
    transition: background-color 500ms ease;
 }
 
+.btn--sold {
+   background-color: #1f2021;
+}
+
 .btn:focus,
 .btn:hover {
    background-color: tomato;

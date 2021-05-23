@@ -448,6 +448,9 @@ h6 {
   outline: 0;
   transition: background-color 500ms ease
 }
+.btn--sold {
+  background-color: #1f2021
+}
 .btn:focus,
 .btn:hover {
   background-color: tomato
@@ -900,6 +903,11 @@ h6 {
 .cat__wrap-column {
   padding: 30px
 }
+@media only screen and (max-width: 576px) {
+  .cat__wrap-column {
+    padding: 15px
+  }
+}
 .cat__title {
   font-size: 24px;
   line-height: 1;
@@ -912,6 +920,11 @@ h6 {
   align-items: center;
   margin: 0 0 16px;
   padding: 0 0 0 22px
+}
+@media only screen and (max-width: 576px) {
+  .cat__wrap-caption {
+    padding: 0 0 0 10px
+  }
 }
 .cat__wrap-caption::before {
   width: 4px;
