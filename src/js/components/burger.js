@@ -3,19 +3,6 @@ const burger = () => {
    const Body = document.querySelector('.body')
    const menu = document.querySelector('.menu')
 
-   function aria(aria, value1, value2) {
-
-      if (Burger.getAttribute(aria) === value1) {
-
-         Burger.setAttribute(aria, value2)
-
-      } else {
-
-         Burger.setAttribute(aria, value1)
-
-      }
-
-   }
 
    Burger.addEventListener('click', () => {
 
@@ -25,15 +12,16 @@ const burger = () => {
       if (Burger.classList.contains('active')) {
 
          Body.style.overflowY = "hidden"
+         Burger.setAttribute('aria-label', 'Закрыть меню')
+         menu.setAttribute('aria-hidden', 'false')
 
       } else {
 
          Body.style.overflowY = "auto"
+         Burger.setAttribute('aria-label', 'Открыть меню')
+         menu.setAttribute('aria-hidden', 'true')
 
       }
-
-      aria('aria-hidden', 'true', 'false')
-      aria('aria-label', 'Открыть меню', 'Закрыть меню')
 
    })
 

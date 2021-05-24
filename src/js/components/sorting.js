@@ -1,6 +1,7 @@
 const sorting = () => {
    const buttonSort1 = document.getElementById('buttonSort1')
    const buttonSort2 = document.getElementById('buttonSort2')
+   const card = document.querySelector('.cat__wrapper')
 
    let replacedNode;
 
@@ -9,7 +10,6 @@ const sorting = () => {
    }
 
    buttonSort1.addEventListener('click', () => {
-      const card = document.querySelector('.cat__wrapper')
       const price = document.querySelectorAll('.cat__price')
 
       for (let i = 0; i < price.length; i++) {
@@ -27,7 +27,6 @@ const sorting = () => {
    })
 
    buttonSort2.addEventListener('click', () => {
-      const card = document.querySelector('.cat__wrapper')
       const price = document.querySelectorAll('.cat__price')
 
       for (let i = 0; i < price.length; i++) {
