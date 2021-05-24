@@ -5,7 +5,7 @@ import buttonArrowTop from './components/buttonArrowTop'
 import validateEmail from './components/validateEmail'
 import sorting from './components/sorting'
 
-// menu();
+menu();
 burger();
 likeMessage();
 buttonArrowTop();
