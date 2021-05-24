@@ -8,6 +8,17 @@ const likeMessage = () => {
 
          event.classList.toggle('active')
 
+         if (event.classList.contains('active')) {
+
+            event.setAttribute('aria-label', 'Убрать из избранного')
+
+         } else {
+
+            event.setAttribute('aria-label', 'Добавить в избранное')
+
+         }
+
+
          message.forEach((e) => {
 
             if (event.classList.contains('active')) {
@@ -35,7 +46,7 @@ const likeMessage = () => {
                }
 
 
-            }, 800)
+            }, 500)
 
          });
 

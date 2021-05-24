@@ -17,8 +17,8 @@ const sorting = () => {
 
             if (+(price[i].getAttribute('data-price')) > +(price[j].getAttribute('data-price'))) {
 
-                  replacedNode = card.replaceChild(card.children[j], card.children[i]);
-                  insertAfter(replacedNode, card.children[i])
+					replacedNode = card.replaceChild(card.children[j], card.children[i]);
+               insertAfter(replacedNode, card.children[i])
 
             }
          }

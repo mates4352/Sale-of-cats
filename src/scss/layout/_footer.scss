@@ -1,6 +1,9 @@
+.footer__container {
+   max-width: 1180px;
+}
+
 .footer__wrapper {
    display: flex;
-   align-items: center;
    justify-content: space-between;
    max-width: 1020px;
    margin: 0 auto;
@@ -30,7 +33,7 @@
 }
 
 .footer__text {
-   @include font(28px,1.2,400);
+   @include font(28px,1.1,400);
    max-width: 300px;
    color: var(--secondary-color);
    opacity: 0.8;
@@ -39,6 +42,10 @@
       max-width: none;
       text-align: center;
    }
+}
+
+.footer__form {
+   padding: 10px 0;
 }
 
 .footer__email {
@@ -51,10 +58,18 @@
    background-color: var(--secondary-color);
    border-radius: 10px;
    outline: 0;
+   transition: border 500ms ease, background-color 500ms ease, color 500ms ease;
 
    @include media(max,$sm) {
       margin: 0 16px 16px 0;
    }
+}
+
+.footer__email:focus,
+.footer__email:hover {
+   color: var(--secondary-color);
+   background-color: #1f2021;
+   border: 1px solid #fff;
 }
 
 .footer__email.validateTrue {
@@ -69,10 +84,11 @@
    @include font(14px,1.2,400);
    color: var(--base-color);
    border: none;
-   transition: transform 500ms ease;
+   transition: transform 500ms ease, color 500ms ease;
 }
 
 .footer__email:focus::placeholder {
+   color: var(--secondary-color);
    transform: translateX(100%);
 }
 

@@ -517,9 +517,11 @@ h6 {
 .menu.active {
   transform: translateX(0)
 }
+.footer__container {
+  max-width: 1180px
+}
 .footer__wrapper {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   max-width: 1020px;
   margin: 0 auto;
@@ -550,7 +552,7 @@ h6 {
 }
 .footer__text {
   font-size: 28px;
-  line-height: 1.2;
+  line-height: 1.1;
   font-weight: 400;
   max-width: 300px;
   color: var(--secondary-color);
@@ -561,6 +563,9 @@ h6 {
     max-width: none;
     text-align: center
   }
+}
+.footer__form {
+  padding: 10px 0
 }
 .footer__email {
   width: 100%;
@@ -666,7 +671,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 0 35px
+  margin: 0 0 40px
 }
 @media only screen and (max-width: 576px) {
   .header__wrap {
@@ -710,6 +715,30 @@ h6 {
     margin: 0 0 25px 0
   }
 }
+.header__item:not(:last-of-type) {
+  margin: 0 72px 0 0
+}
+@media only screen and (max-width: 992px) {
+  .header__item:not(:last-of-type) {
+    margin: 0 0 25px 0
+  }
+}
+.header__item:nth-child(2) {
+  margin: 0 58px 0 0
+}
+@media only screen and (max-width: 992px) {
+  .header__item:nth-child(2) {
+    margin: 0 0 25px 0
+  }
+}
+.header__item:nth-child(3) {
+  margin: 0 58px 0 0
+}
+@media only screen and (max-width: 992px) {
+  .header__item:nth-child(3) {
+    margin: 0 0 25px 0
+  }
+}
 .header__link {
   font-size: 18px;
   line-height: 1;
@@ -745,6 +774,7 @@ h6 {
   transform: scale(1)
 }
 .header__contact {
+  padding: 21px 0 0 0;
   text-align: right
 }
 @media only screen and (max-width: 992px) {
@@ -759,10 +789,10 @@ h6 {
   }
 }
 .header__tel {
-  font-size: 29px;
+  font-size: 24px;
   line-height: 1.2;
   display: block;
-  margin: 0 0 5px;
+  margin: 0 0 10px;
   color: var(--secondary-color);
   text-align: inherit
 }
@@ -797,7 +827,7 @@ h6 {
 .cat__sorting {
   display: flex;
   align-items: center;
-  margin: 0 0 48px
+  margin: 0 0 42px
 }
 @media only screen and (max-width: 576px) {
   .cat__sorting {
@@ -839,10 +869,13 @@ h6 {
   width: 15px;
   height: 15px;
   position: absolute;
-  top: 55%;
-  right: 0;
+  top: 63%;
+  right: -6px;
   transform: translateY(-50%) rotate(180deg);
   transition: transform 500ms ease
+}
+.cat__filter:last-of-type > .cat__label > .cat__arrow {
+  right: -20px
 }
 .cat__sort {
   position: absolute;
@@ -918,6 +951,8 @@ h6 {
   position: absolute;
   top: 32px;
   right: 32px;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   transition: fill 500ms ease;
   fill: #999
@@ -949,7 +984,7 @@ h6 {
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 0 16px;
+  margin: 0 0 28px;
   padding: 0 0 0 22px
 }
 @media only screen and (max-width: 576px) {

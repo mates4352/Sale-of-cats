@@ -5,7 +5,7 @@
 .cat__sorting {
    display: flex;
    align-items: center;
-   margin: 0 0 48px;
+   margin: 0 0 42px;
 
    @include media(max,$sm) {
       flex-direction: column;
@@ -48,10 +48,14 @@
 .cat__arrow {
    @include wh(15px);
    position: absolute;
-   top: 55%;
-   right: 0;
+   top: 63%;
+   right: -6px;
    transform: translateY(-50%) rotate(180deg);
    transition: transform 500ms ease;
+}
+
+.cat__filter:last-of-type > .cat__label > .cat__arrow {
+   right: -20px;
 }
 
 .cat__sort {
@@ -125,6 +129,8 @@
    position: absolute;
    top: 32px;
    right: 32px;
+   background-color: transparent;
+   border: none;
    cursor: pointer;
    transition: fill 500ms ease;
    fill: #999;
@@ -159,7 +165,7 @@
    position: relative;
    display: flex;
    align-items: center;
-   margin: 0 0 16px;
+   margin: 0 0 28px;
    padding: 0 0 0 22px;
 
    @include media(max,$sm) {

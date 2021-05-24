@@ -10,8 +10,10 @@
    ],
    "author": "Sergeu Sabyrkin",
    "license": "WTFPL",
-   "scripts": {
-   },
+   "homepage": "https://mates4352.gitgub.io/test",
+	"scripts": {
+		"deploy": "gh-pages -d dist"
+	},
    "lint-staged": {
       "*.scss": "stylelint"
    },
