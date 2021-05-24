@@ -571,12 +571,19 @@ h6 {
   font-weight: 700;
   background-color: var(--secondary-color);
   border-radius: 10px;
-  outline: 0
+  outline: 0;
+  transition: border 500ms ease,background-color 500ms ease,color 500ms ease
 }
 @media only screen and (max-width: 576px) {
   .footer__email {
     margin: 0 16px 16px 0
   }
+}
+.footer__email:focus,
+.footer__email:hover {
+  color: var(--secondary-color);
+  background-color: #1f2021;
+  border: 1px solid #fff
 }
 .footer__email.validateTrue {
   border: 4px solid tomato
@@ -590,9 +597,10 @@ h6 {
   font-weight: 400;
   color: var(--base-color);
   border: none;
-  transition: transform 500ms ease
+  transition: transform 500ms ease,color 500ms ease
 }
 .footer__email:focus::placeholder {
+  color: var(--secondary-color);
   transform: translateX(100%)
 }
 .footer__wrap {
